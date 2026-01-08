@@ -22,5 +22,6 @@ enum class HomeSectionType(
 	ACTIVE_RECORDINGS("activerecordings", R.string.home_section_active_recordings),
 	NEXT_UP("nextup", R.string.home_section_next_up),
 	LIVE_TV("livetv", R.string.home_section_livetv),
+	WATCH_AGAIN("watchagain", R.string.home_section_watch_again),
 	NONE("none", R.string.home_section_none),
 }

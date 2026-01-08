@@ -326,7 +326,7 @@ class HomeFragment : Fragment() {
                 navigationRepository.navigate(Destinations.search())
             }
             val settingsAction = {
-                val intent = Intent(requireContext(), org.jellyfin.androidtv.ui.preference.PreferencesComposeActivity::class.java)
+                val intent = Intent(requireContext(), org.jellyfin.androidtv.ui.preference.PreferencesActivity::class.java)
                 startActivity(intent)
             }
             val switchUsersAction = {

@@ -64,6 +64,7 @@ class GenreManager(
 				preference = userSettingPreferences.showSuggestedMoviesRow,
 				loader = { createSuggestedMoviesRow() }
 			),
+
 			GenreConfig(
 				name = "Collections",
 				displayName = "Collections",

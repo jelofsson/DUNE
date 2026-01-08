@@ -178,12 +178,13 @@ class EnhancedTweaksPreferencesScreen : OptionsFragment() {
             checkbox {
                 setTitle(R.string.show_war_row)
                 bind(userSettingPreferences, userSettingPreferences.showWarRow)
-
-				checkbox {
-					setTitle(R.string.show_suggested_movies_row)
-					bind(userSettingPreferences, userSettingPreferences.showSuggestedMoviesRow)
-				}
             }
+
+			// Suggested Movies
+			checkbox {
+				setTitle(R.string.show_suggested_movies_row)
+				bind(userSettingPreferences, userSettingPreferences.showSuggestedMoviesRow)
+			}
         }
     }
 }

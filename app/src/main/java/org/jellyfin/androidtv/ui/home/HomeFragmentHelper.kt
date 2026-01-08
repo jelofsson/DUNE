@@ -31,7 +31,8 @@ import org.jellyfin.androidtv.ui.home.HomeFragmentMusicVideosRow
 class HomeFragmentHelper(
     private val context: Context,
     private val userRepository: UserRepository,
-    private val userPreferences: UserPreferences
+    private val userPreferences: UserPreferences,
+    private val api: ApiClient
 ) {
     companion object {
         private const val ITEM_LIMIT = 40
@@ -253,6 +254,10 @@ class HomeFragmentHelper(
                 row.addToRowsAdapter(context, noInfoCardPresenter, rowsAdapter)
             }
         }
+    }
+
+    fun loadWatchAgain(): HomeFragmentRow {
+        return HomeFragmentWatchAgainRow(userRepository, api)
     }
 }
 

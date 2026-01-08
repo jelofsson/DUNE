@@ -62,6 +62,8 @@
     <string name="lbl_tv_series">TV series</string>
     <string name="lbl_other">Other</string>
     <string name="because_you_watched">Because you watched %1$s</string>
+    <string name="recently_watched">Recently Watched</string>
+    <string name="watch_again">Watch Again</string>
     <string name="lbl_play_all">Play all</string>
     <string name="lbl_shuffle_all">Shuffle all</string>
     <string name="lbl_Watched_History_Series">Watched Series</string>
@@ -506,6 +508,7 @@
     <string name="home_section_continue_watching_combined">Continue watching combined</string>
     <string name="home_section_continue_nextup">Continue watching</string>
     <string name="home_section_livetv">Live TV</string>
+    <string name="home_section_watch_again">Watch Again</string>
     <string name="home_section_none">None</string>
     <string name="home_section_i">Home section %1$d</string>
     <string name="searchable_hint">Search Dune</string>

@@ -78,7 +78,7 @@ class HomeRowsFragment : RowsSupportFragment(), AudioEventListener, View.OnKeyLi
 	private val keyProcessor by inject<KeyProcessor>()
 
 	private val userPreferences by inject<UserPreferences>()
-	private val helper by lazy { HomeFragmentHelper(requireContext(), userRepository, userPreferences) }
+	private val helper by lazy { HomeFragmentHelper(requireContext(), userRepository, userPreferences, api) }
 
 	// Data
 	private var currentItem: BaseRowItem? = null
@@ -165,6 +165,7 @@ class HomeRowsFragment : RowsSupportFragment(), AudioEventListener, View.OnKeyLi
 						} else {
 							emptyList<HomeFragmentRow>()
 						}
+						HomeSectionType.WATCH_AGAIN -> helper.loadWatchAgain()
 						HomeSectionType.NONE -> null
 					}
 				}
