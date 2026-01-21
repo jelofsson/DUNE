@@ -29,6 +29,7 @@ import kotlinx.coroutines.launch
 import org.jellyfin.androidtv.R
 import org.jellyfin.androidtv.auth.repository.SessionRepository
 import org.jellyfin.androidtv.auth.repository.UserRepository
+import org.jellyfin.androidtv.preference.UserPreferences
 import org.jellyfin.androidtv.databinding.ActivityMainBinding
 import org.jellyfin.androidtv.integration.LeanbackChannelWorker
 import org.jellyfin.androidtv.ui.ScreensaverViewModel
@@ -62,7 +63,7 @@ class MainActivity : FragmentActivity() {
 	private val navigationRepository by inject<NavigationRepository>()
 	private val sessionRepository by inject<SessionRepository>()
 	private val userRepository by inject<UserRepository>()
-	private val userPreferences by inject<org.jellyfin.androidtv.preference.UserPreferences>()
+	private val userPreferences by inject<UserPreferences>()
 	private val screensaverViewModel by viewModel<ScreensaverViewModel>()
 	private val workManager by inject<WorkManager>()
 	private val socketHandler by inject<SocketHandler>()
@@ -347,7 +348,7 @@ class MainActivity : FragmentActivity() {
 	private fun showExitConfirmation() {
 		// If user preference disables confirmation, exit immediately
 		try {
-			if (!userPreferences.confirmExit) {
+			if (!userPreferences[UserPreferences.confirmExit]) {
 				// Force close the app completely
 				finishAffinity()
 				android.os.Process.killProcess(android.os.Process.myPid())

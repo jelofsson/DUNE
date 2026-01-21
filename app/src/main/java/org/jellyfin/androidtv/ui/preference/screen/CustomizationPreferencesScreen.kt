@@ -130,13 +130,6 @@ class CustomizationPreferencesScreen : OptionsFragment() {
 				}
 			}
 
-				checkbox {
-					setTitle(R.string.pref_enable_media_management)
-					setContent(R.string.pref_enable_media_management_description)
-					bind(userPreferences, UserPreferences.mediaManagementEnabled)
-				}
-			}
-
 		category {
 			setTitle(R.string.pref_screensaver)
 
