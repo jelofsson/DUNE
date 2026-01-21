@@ -62,10 +62,12 @@ class MainActivity : FragmentActivity() {
 	private val navigationRepository by inject<NavigationRepository>()
 	private val sessionRepository by inject<SessionRepository>()
 	private val userRepository by inject<UserRepository>()
+	private val userPreferences by inject<org.jellyfin.androidtv.preference.UserPreferences>()
 	private val screensaverViewModel by viewModel<ScreensaverViewModel>()
 	private val workManager by inject<WorkManager>()
 	private val socketHandler by inject<SocketHandler>()
 	private val api by inject<ApiClient>()
+
 
 	private lateinit var binding: ActivityMainBinding
 
@@ -343,6 +345,20 @@ class MainActivity : FragmentActivity() {
 	}
 
 	private fun showExitConfirmation() {
+		// If user preference disables confirmation, exit immediately
+		try {
+			if (!userPreferences.confirmExit) {
+				// Force close the app completely
+				finishAffinity()
+				android.os.Process.killProcess(android.os.Process.myPid())
+				System.exit(0)
+				return
+			}
+		} catch (e: Exception) {
+			// If preferences aren't available for any reason, fall back to showing dialog
+			Timber.w(e, "User preferences not available when checking confirmExit; falling back to dialog")
+		}
+
 		val dialog = AlertDialog.Builder(this, R.style.ExitDialogTheme).apply {
 			setMessage(R.string.exit_app_message)
 			setPositiveButton(R.string.yes) { _, _ ->
@@ -422,6 +438,7 @@ class MainActivity : FragmentActivity() {
 			Timber.e(e, "Error styling exit dialog")
 		}
 	}
+
 
 	private fun handleOnBackPressed() {
 		if (supportFragmentManager.backStackEntryCount > 0) {

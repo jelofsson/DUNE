@@ -80,7 +80,6 @@ class CustomizationPreferencesScreen : OptionsFragment() {
 					bind(userPreferences, UserPreferences.defaultRatingType)
 				}
 
-
 				checkbox {
 					setTitle(R.string.pref_theme_songs_enable)
 					bind(userSettingPreferences, userSettingPreferences.themeSongsEnabled)
@@ -116,6 +115,20 @@ class CustomizationPreferencesScreen : OptionsFragment() {
 					setContent(R.string.desc_premieres)
 					bind(userPreferences, UserPreferences.premieresEnabled)
 				}
+
+				checkbox {
+					setTitle(R.string.pref_enable_media_management)
+					setContent(R.string.pref_enable_media_management_description)
+					bind(userPreferences, UserPreferences.mediaManagementEnabled)
+				}
+
+				// New setting: confirm exit
+				checkbox {
+					setTitle(R.string.pref_confirm_exit_title)
+					setContent(R.string.pref_confirm_exit_summary)
+					bind(userPreferences, UserPreferences.confirmExit)
+				}
+			}
 
 				checkbox {
 					setTitle(R.string.pref_enable_media_management)

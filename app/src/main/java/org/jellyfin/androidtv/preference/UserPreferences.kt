@@ -347,6 +347,14 @@ class UserPreferences(context: Context) : SharedPreferenceStore(
 		var videoStartDelay = longPreference("video_start_delay", 0)
 
 		/**
+		 * Whether to show a confirmation dialog when quitting the app.
+		 * If false, the app will exit immediately when back is pressed at the root.
+		 */
+		var confirmExit = booleanPreference("confirm_exit", false)
+
+
+
+		/**
 		 * The actions to take for each media segment type. Managed by the [MediaSegmentRepository].
 		 */
 		var mediaSegmentActions = stringPreference(

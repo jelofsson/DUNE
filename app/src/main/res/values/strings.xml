@@ -250,6 +250,11 @@
 
     <string name="lbl_subtitle_track">Select subtitle track</string>
     <string name="btn_got_it">Got it</string>
+
+    <!-- Confirm exit preference -->
+    <string name="pref_confirm_exit_title">Confirm on exit</string>
+    <string name="pref_confirm_exit_summary">Show a confirmation dialog when quitting the app from the root screen</string>
+
     <string name="lbl_clear_queue">Clear queue</string>
     <string name="lbl_play_next_up">Play next up</string>
     <string name="lbl_open">Open</string>
@@ -928,4 +933,47 @@
     <string name="pref_screensaver_sort_by">Screensaver Sort Order</string>
     <string name="pref_screensaver_sort_by_description">Choose how items are sorted in the screensaver</string>
     <string name="lbl_version">lbl_version</string>
+
+    <!-- Missing strings that should be in default values -->
+    <string name="home_prefs_customization">Customization</string>
+    <string name="lbl_backdrop_blur">Backdrop blur</string>
+    <string name="msg_unable_load_subs">Unable to load subtitles</string>
+    <string name="panel_title">Navigation</string>
+    <string name="pref_backdrop_blur_description" formatted="false">Control the blur effect of backdrop images from 0% (no blur) to 100% (full blur)</string>
+    <string name="show_anime_row">Show Anime Row</string>
+    <string name="suggested_movies">Suggested Movies</string>
+    <string name="suggested_series">Suggested Series</string>
+
+    <!-- Default language preferences -->
+    <string name="pref_default_language_none">(Default)</string>
+    <string name="pref_default_language_ara">العربية (Arabic)</string>
+    <string name="pref_default_language_zho">中文 (Chinese)</string>
+    <string name="pref_default_language_ces">Čeština (Czech)</string>
+    <string name="pref_default_language_dan">Dansk (Danish)</string>
+    <string name="pref_default_language_nld">Nederlands (Dutch)</string>
+    <string name="pref_default_language_eng">English</string>
+    <string name="pref_default_language_fin">Suomi (Finnish)</string>
+    <string name="pref_default_language_fra">Français (French)</string>
+    <string name="pref_default_language_deu">Deutsch (German)</string>
+    <string name="pref_default_language_ell">Ελληνικά (Greek)</string>
+    <string name="pref_default_language_heb">עברית (Hebrew)</string>
+    <string name="pref_default_language_hin">हिन्दी (Hindi)</string>
+    <string name="pref_default_language_hun">Magyar (Hungarian)</string>
+    <string name="pref_default_language_ind">Bahasa Indonesia (Indonesian)</string>
+    <string name="pref_default_language_ita">Italiano (Italian)</string>
+    <string name="pref_default_language_jpn">日本語 (Japanese)</string>
+    <string name="pref_default_language_kor">한국어 (Korean)</string>
+    <string name="pref_default_language_msa">Bahasa Melayu (Malay)</string>
+    <string name="pref_default_language_nor">Norsk (Norwegian)</string>
+    <string name="pref_default_language_pol">Polski (Polish)</string>
+    <string name="pref_default_language_por">Português (Portuguese)</string>
+    <string name="pref_default_language_ron">Română (Romanian)</string>
+    <string name="pref_default_language_rus">Русский (Russian)</string>
+    <string name="pref_default_language_slk">Slovenčina (Slovak)</string>
+    <string name="pref_default_language_spa">Español (Spanish)</string>
+    <string name="pref_default_language_swe">Svenska (Swedish)</string>
+    <string name="pref_default_language_tha">ไทย (Thai)</string>
+    <string name="pref_default_language_tur">Türkçe (Turkish)</string>
+    <string name="pref_default_language_ukr">Українська (Ukrainian)</string>
+    <string name="pref_default_language_vie">Tiếng Việt (Vietnamese)</string>
 </resources>
