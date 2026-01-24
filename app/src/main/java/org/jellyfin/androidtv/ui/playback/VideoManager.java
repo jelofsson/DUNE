@@ -115,6 +115,7 @@ public class VideoManager {
 
         mExoPlayerView = view.findViewById(R.id.exoPlayerView);
         mExoPlayerView.setPlayer(mExoPlayer);
+        mExoPlayerView.setShutterBackgroundColor(Color.BLACK);
         int strokeColor = userPreferences.get(UserPreferences.Companion.getSubtitleTextStrokeColor()).intValue();
         int textWeight = userPreferences.get(UserPreferences.Companion.getSubtitlesTextWeightValue());
         CaptionStyleCompat subtitleStyle = new CaptionStyleCompat(
