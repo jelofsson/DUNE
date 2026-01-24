@@ -901,8 +901,9 @@ public class PlaybackController implements PlaybackControllerNotifiable {
             }
         }
 
-        // If no match found, return the default subtitle track if available
-        return mediaSource.getDefaultSubtitleStreamIndex();
+        // If no match found, return null to disable subtitles (don't fall back to server default)
+        Timber.d("No subtitle match found for preferred language %s, disabling subtitles", preferredLangCode);
+        return null;
     }
 
     public void switchAudioStream(int index) {
