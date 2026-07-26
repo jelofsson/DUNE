@@ -112,6 +112,8 @@ class ExoPlayerBackend(
 						}.build()
 					)
 					setAllowInvalidateSelectionsOnRendererCapabilitiesChange(true)
+					// Disable text tracks by default to prevent auto-selection of subtitles
+					setTrackTypeDisabled(C.TRACK_TYPE_TEXT, true)
 				})
 			})
 			.setMediaSourceFactory(mediaSourceFactory)
